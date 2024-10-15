@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Mi Portafolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css"> <!-- Enlace a tu archivo de estilos CSS -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">Portafolio Personal</div>
+            <ul class="nav-links">
+                <li><a href="#Inicio">Inicio</a></li>
+                <li><a href="#SobreMi">Sobre mi</a></li>
+                <li><a href="#Proyectos">Proyectos</a></li>
+                <li><a href="#Contactos">Contacto</a></li>
+                <button id="theme-toggle" class="theme-btn" onclick="toggleTheme()">
+                    <i id="theme-icon" class="fas fa-sun"></i> <!-- Icono inicial de sol -->
+                </button>
+            </ul>
+            
+            <div class="hamburger" onclick="toggleMenu()">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+           
+        </nav>
+    </header>
+
+
+    <main>
+        <section id="Inicio" class="flex-container">
+            <div class="column image-column p2">
+                <img src="img/logoinicio.png" alt="Imagen Personal" class="profile-image">
+            </div>
+            <div class="column text-column">
+                <h1>Hola, soy <span class="title"> Jhovana</span></h1>
+                <p>Bienvenido a mi portafolio. Soy una Estudiante de Ingeníeria de sistemas y siempre busco aprender cosas nuevas.</p>
+                <a href="cv.pdf" class="btn-cv" download>Descargar CV</a>
+            </div>
+        </section>
+        <section id="SobreMi" class="about-section">
+            <div class="container">
+                <div class="about-text p3">
+                    <h2 class="title">Sobre Mí</h2>
+                    <p>
+                        ¡Hola! Soy Jhovana, estudiante de Ingeniería de Sistemas. Mi pasión es la tecnología y el desarrollo de software. Siempre busco aprender nuevas habilidades que me permitan crecer en mi carrera y aportar soluciones innovadoras a problemas complejos. Me encanta colaborar en proyectos que impulsen el cambio y la innovación.
+                    </p>
+                    <p>
+                        Mi objetivo es seguir aprendiendo y mejorando cada día. Soy una persona curiosa, dedicada y con un gran amor por la programación. Estoy entusiasmada de seguir construyendo mi carrera en este campo tan dinámico y emocionante.
+                    </p>
+                </div>
+                <div class="about-image p4">
+                    <img src="img/jhovana1.png" alt="Foto de Jhovana">
+                </div>
+            </div>
+        </section>
+        <section id="Proyectos" class="projects-section">
+            <h2 class="title">Mis Proyectos</h2>
+            <div class="carousel ">
+                <div class="carousel-images p5">
+                    <div class="carousel-item active">
+                        <img src="img/proyecto1.jfif" alt="Proyecto 1">
+                        <p class="project-description">Proyecto El proyecto de una mano robótica consiste en diseñar y construir una prótesis funcional que imita los movimientos de una mano humana. Utiliza sensores y motores para detectar señales y realizar acciones como agarrar y soltar objetos. </p>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/proyecto2.jpg" alt="Proyecto 2">
+                        <p class="project-description">Proyecto El proyecto de simulación de redes inalámbricas se centra en recrear el comportamiento y las interacciones de dispositivos conectados sin cables, como teléfonos móviles y routers, en un entorno virtual. Utiliza software especializado para modelar el rendimiento de la red</p>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/proyecto3.jpg" alt="Proyecto 3">
+                        <p class="project-description">Proyecto El proyecto de desarrollo de aplicaciones web se enfoca en crear plataformas interactivas accesibles desde navegadores, combinando tecnologías como HTML, CSS, JavaScript y frameworks backend como Django o Node.js.</p>
+                    </div>
+                </div>
+                <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+                <button class="next" onclick="changeSlide(1)">&#10095;</button>
+            </div>
+        </section>
+        
+    </main>
+
+    <footer>
+        <div id="Contactos" class="footer-contact">
+            <h3 class="title">Contáctame</h3>
+            <form id="contact-form p6 ">
+                <div class="form-group">
+                    <label for="name">Nombre:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Correo Electrónico:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Mensaje:</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                </div>
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    
+        <div class="footer-social">
+            <h4>Sígueme en Redes Sociales</h4>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-github"></i></a>
+        </div>
+    
+        <p class="footer-copy">&copy; 2024 Jhovana - Todos los derechos reservados</p>
+    </footer>
+    
+    <script>
+        window.sr = ScrollReveal();
+        sr.reveal('.p2 ', {
+            duration: 3000,
+            origin: 'right',
+            distance: '-100px'  
+        });
+        
+        window.sr = ScrollReveal();
+        sr.reveal('.p3 ', {
+            duration: 3000,
+            origin: 'right',
+            distance: '-100px'
+        });
+        window.sr = ScrollReveal();
+        sr.reveal('.p4 ', {
+            duration: 3000,
+            origin: 'left',
+            distance: '-100px'
+        });
+        window.sr = ScrollReveal();
+        sr.reveal('.p5 ', {
+            duration: 3000,
+            origin: 'top',
+            distance: '-100px'
+        });
+        window.sr = ScrollReveal();
+        sr.reveal('.p6 ', {
+            duration: 3000,
+            origin: 'bottom',
+            distance: '-100px'
+        });
+
+
+    </script>
+    
+    <script src="js/dinamic.js"></script> <!-- Enlace a tu archivo de JavaScript -->
+</body>
+</html>
